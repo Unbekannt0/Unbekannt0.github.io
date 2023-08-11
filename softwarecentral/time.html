@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Software Central - Time</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+</head>
+<body>
+  <div class="container2">
+    <div class="content12">
+      <p>Software Central - Time Space</p>
+      <h1>We're <span>Launching</span> Soon</h1>
+      <div class="launch-time">
+        <div>
+          <p id="days">00</p>
+          <span>Days</span>
+        </div>
+        <div>
+          <p id="hours">00</p>
+          <span>Hours</span>
+        </div>
+        <div>
+          <p id="minutes">00</p>
+          <span>Minutes</span>
+        </div>
+        <div>
+          <p id="seconds">00</p>
+          <span>Seconds</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var countDownDate = new Date("July 6, 2023 00:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+    }, 1000);
+  </script>
+</body>
+</html>
